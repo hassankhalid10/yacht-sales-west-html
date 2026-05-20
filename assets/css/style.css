@@ -1,0 +1,2616 @@
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wdth,wght@0,75..125,200..900;1,75..125,200..900&display=swap');
+
+/* ============================================================
+   YACHT SALES WEST — HOME PAGE CSS
+   Design: Figma node 1:2
+   Colors: Blue #042C65 | Blackish Blue #000B1B | Slate #333
+   Font: Mona Sans (Google Fonts)
+   ============================================================ */
+
+/* --- Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ysw-blue: #042C65;
+    --ysw-blackish-blue: #000B1B;
+    --ysw-slate: #333333;
+    --ysw-lightest-blue: #F5F9FF;
+    --ysw-e6: #E6E6E6;
+    --ysw-text-gray: #3D3E42;
+    --ysw-d9: #D9D9D9;
+    --ysw-blackish: #1B2026;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff;
+    font-family: "Mona Sans", sans-serif;
+    font-variation-settings: 'wdth' 100;
+    color: var(--ysw-slate);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ============================================================
+   TYPOGRAPHY UTILITIES  (shared / reused across all sections)
+   ============================================================ */
+.yswH1 {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 80px;
+    font-weight: 500;
+    line-height: 88px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    font-variation-settings: 'wght' 500, 'wdth' 125;
+}
+
+.yswH2 {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-variation-settings: 'wght' 600, 'wdth' 125;
+}
+
+.yswH3 {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-variation-settings: 'wght' 600, 'wdth' 125;
+}
+
+.yswH5 {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0;
+    font-variation-settings: 'wght' 320, 'wdth' 125;
+}
+
+.yswEyebrow {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.6;
+    font-variation-settings: 'wght' 400, 'wdth' 125;
+}
+
+.yswPara {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    font-variation-settings: 'wght' 400, 'wdth' 100;
+}
+
+/* --- Colour helpers --- */
+.yswBlueText {
+    color: var(--ysw-blue);
+}
+
+.yswSlateText {
+    color: var(--ysw-slate);
+}
+
+.yswWhiteText {
+    color: #fff;
+}
+
+/* ============================================================
+   BUTTONS & LINKS  (shared / reused)
+   ============================================================ */
+.yswBtnOutlineWhite,
+.yswBtnOutlineBlue,
+.yswBtnPrimary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Mona Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 11px 28px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-variation-settings: 'wght' 600, 'wdth' 125;
+}
+
+.yswBtnOutlineWhite {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.yswBtnOutlineWhite:hover {
+    background-color: #fff;
+    color: var(--ysw-blue);
+}
+
+.yswBtnOutlineBlue {
+    background-color: transparent;
+    color: var(--ysw-blue);
+    border: 2px solid var(--ysw-blue);
+}
+
+.yswBtnOutlineBlue:hover {
+    background-color: var(--ysw-blue);
+    color: #fff;
+}
+
+.yswBtnPrimary {
+    background-color: var(--ysw-blue);
+    color: #fff;
+    border: 2px solid var(--ysw-blue);
+}
+
+.yswBtnPrimary:hover {
+    background-color: #06387f;
+    border-color: #06387f;
+    color: #fff;
+}
+
+/* --- Arrow link --- */
+.yswArrowLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Mona Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, gap 0.2s ease;
+    font-variation-settings: 'wght' 600, 'wdth' 125;
+}
+
+.yswArrowLink i {
+    font-size: 13px;
+}
+
+.yswArrowLink:hover {
+    opacity: 1;
+    gap: 14px;
+}
+
+/* ============================================================
+   LAYOUT CONTAINER
+   ============================================================ */
+.yswContainer {
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
+}
+
+/* ============================================================
+   LOGO (sailboat badge)
+   ============================================================ */
+.yswLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 96px;
+    padding: 16px 8px 18px;
+    background-color: var(--ysw-blue);
+    flex-shrink: 0;
+}
+
+.yswLogoSail {
+    width: 52px;
+    height: auto;
+    display: block;
+}
+
+.yswLogoText {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.yswLogoText span {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.45);
+    font-variation-settings: 'wght' 600, 'wdth' 125;
+}
+
+.yswLogoText span:last-child {
+    border-bottom: none;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.yswHeader {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    background-color: #fff;
+    height: 80px;
+}
+
+.yswHeaderInner {
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 0 40px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+/* logo hangs below the 80px bar */
+.yswHeader .yswLogo {
+    align-self: flex-start;
+    position: relative;
+    z-index: 5;
+}
+
+.yswHeaderContact {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.yswLocationSelect {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: "Mona Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--ysw-blackish-blue);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-variation-settings: 'wght' 400, 'wdth' 125;
+}
+
+.yswLocationSelect i {
+    font-size: 9px;
+}
+
+.yswHeaderPhone {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--ysw-blue);
+    font-variation-settings: 'wght' 600, 'wdth' 125;
+}
+
+.yswNav {
+    margin-left: auto;
+}
+
+.yswNavLinks {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.yswNavLink {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--ysw-blue);
+    transition: opacity 0.2s ease;
+    font-variation-settings: 'wght' 600, 'wdth' 125;
+}
+
+.yswNavLink:hover {
+    opacity: 0.65;
+}
+
+.yswHeaderRight {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.yswDiscoverLink {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--ysw-blackish-blue);
+    transition: opacity 0.2s ease;
+    font-variation-settings: 'wght' 600, 'wdth' 125;
+}
+
+.yswDiscoverLink:hover {
+    opacity: 0.65;
+}
+
+.yswHamburger {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 26px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.yswHamburger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--ysw-blue);
+    transition: all 0.25s ease;
+}
+
+/* ============================================================
+   SIDE MENU
+   ============================================================ */
+.yswMenuOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 11, 27, 0.55);
+    z-index: 300;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.yswMenuOverlay.yswMenuActive {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.yswSideMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 380px;
+    max-width: 88vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 310;
+    padding: 32px 36px;
+    overflow-y: auto;
+    transform: translateX(110%);
+    transition: transform 0.35s ease;
+    box-shadow: -10px 0 40px rgba(0, 11, 27, 0.18);
+}
+
+.yswSideMenu.yswMenuActive {
+    transform: translateX(0);
+}
+
+.yswSideMenuTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.yswSideMenuTitle {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ysw-blue);
+    font-variation-settings: 'wght' 600, 'wdth' 125;
+}
+
+.yswSideMenuClose {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    color: var(--ysw-blue);
+    line-height: 1;
+}
+
+.yswSideMenuList li {
+    border-bottom: 1px solid var(--ysw-e6);
+}
+
+.yswSideMenuList li a {
+    display: block;
+    padding: 16px 0;
+    font-family: "Mona Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--ysw-blue);
+    transition: padding-left 0.2s ease;
+    font-variation-settings: 'wght' 600, 'wdth' 125;
+}
+
+.yswSideMenuList li a:hover {
+    padding-left: 8px;
+}
+
+.yswSideMenuContact {
+    margin-top: 32px;
+}
+
+.yswSideMenuLoc {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--ysw-blackish-blue);
+    margin-top: 16px;
+    font-variation-settings: 'wght' 400, 'wdth' 125;
+}
+
+.yswSideMenuPhone {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--ysw-blue);
+    display: block;
+    margin-top: 2px;
+    font-variation-settings: 'wght' 600, 'wdth' 125;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.yswHero {
+    position: relative;
+    width: 100%;
+    height: 880px;
+    overflow: hidden;
+}
+
+.yswHeroImg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.yswHeroOverlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(4, 44, 101, 0) 35%, rgba(4, 44, 101, 0.85) 100%),
+        rgba(0, 11, 27, 0.15);
+}
+
+.yswHeroInner {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+}
+
+.yswHeroContent {
+    position: relative;
+    z-index: 2;
+}
+
+.yswHeroActions {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-top: 40px;
+}
+
+/* ============================================================
+   NEW / PRE-OWNED YACHTS
+   ============================================================ */
+.yswYachtTypes {
+    display: flex;
+    width: 100%;
+    gap: 4px;
+}
+
+.yswYachtType {
+    position: relative;
+    flex: 1;
+    height: 600px;
+    overflow: hidden;
+}
+
+.yswYachtTypeImg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.yswYachtType:hover .yswYachtTypeImg {
+    transform: scale(1.05);
+}
+
+.yswYachtTypeGradient {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 65%;
+    background: linear-gradient(180deg, rgba(4, 44, 101, 0) 0%, rgba(4, 44, 101, 0.85) 100%);
+}
+
+.yswYachtTypeContent {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 0 64px 56px;
+}
+
+.yswYachtTypeContent .yswArrowLink {
+    margin-top: 18px;
+}
+
+/* ============================================================
+   FOUNDED STATEMENT
+   ============================================================ */
+.yswFounded {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.yswFoundedText {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--ysw-slate);
+}
+
+/* ============================================================
+   PROMO SLIDER
+   ============================================================ */
+.yswPromo {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.yswPromoSlide {
+    position: relative;
+    width: 100%;
+    height: 880px;
+    overflow: hidden;
+}
+
+.yswPromoImg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.yswPromoOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(4, 44, 101, 0) 30%, rgba(4, 44, 101, 0.9) 100%);
+}
+
+.yswPromoContent {
+    position: absolute;
+    left: 50%;
+    bottom: 130px;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 90%;
+    text-align: center;
+}
+
+.yswPromoLogo {
+    width: 320px;
+    max-width: 70vw;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Promo carousel — Owl overrides */
+.yswPromoCarousel.owl-carousel .owl-nav {
+    margin: 0;
+}
+
+.yswPromoCarousel.owl-carousel .owl-nav button.owl-prev,
+.yswPromoCarousel.owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    top: auto;
+    bottom: 56px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+.yswPromoCarousel.owl-carousel .owl-nav button.owl-prev {
+    right: 110px;
+}
+
+.yswPromoCarousel.owl-carousel .owl-nav button.owl-next {
+    right: 40px;
+}
+
+.yswPromoCarousel.owl-carousel .owl-nav button.owl-prev:hover,
+.yswPromoCarousel.owl-carousel .owl-nav button.owl-next:hover {
+    background: #fff;
+    color: var(--ysw-blue);
+    border-color: #fff;
+}
+
+.yswPromoCarousel.owl-carousel .owl-nav button span {
+    display: none;
+}
+
+.yswPromoCarousel.owl-carousel .owl-dots {
+    position: absolute;
+    bottom: 72px;
+    left: 200px;
+    display: flex;
+    gap: 8px;
+}
+
+.yswPromoCarousel.owl-carousel .owl-dots .owl-dot span {
+    width: 28px;
+    height: 4px;
+    border-radius: 4px;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.4);
+    transition: all 0.25s ease;
+}
+
+.yswPromoCarousel.owl-carousel .owl-dots .owl-dot.active span {
+    background: #fff;
+    width: 44px;
+}
+
+/* ============================================================
+   YSW YACHT COLLECTION
+   ============================================================ */
+.yswCollection {
+    padding: 90px 0;
+    background-color: #fff;
+}
+
+.yswCollectionHead {
+    margin-bottom: 56px;
+}
+
+.yswCollectionLogos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px 80px;
+}
+
+.yswCollectionLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+}
+
+.yswCollectionLogo img {
+    max-height: 44px;
+    width: auto;
+    object-fit: contain;
+}
+
+.yswBrandWordmark {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--ysw-blue);
+    font-variation-settings: 'wght' 600, 'wdth' 110;
+}
+
+/* ============================================================
+   WELCOME ABOARD
+   ============================================================ */
+.yswWelcome {
+    padding: 40px 0 110px;
+    background-color: #fff;
+}
+
+.yswWelcomeText {
+    max-width: 560px;
+}
+
+.yswWelcomeText .yswH2 {
+    margin-top: 8px;
+}
+
+.yswWelcomeImageWrap {
+    position: relative;
+    width: 100%;
+    padding-top: 68%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.yswWelcomeImageWrap img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============================================================
+   RECENT ARRIVALS
+   ============================================================ */
+.yswArrivals {
+    padding: 30px 0 110px;
+    background-color: #fff;
+}
+
+.yswArrivalsHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.yswArrivalsNav {
+    display: flex;
+    gap: 16px;
+}
+
+.yswCarouselBtn {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 1.5px solid var(--ysw-d9);
+    background: transparent;
+    color: var(--ysw-blue);
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+.yswCarouselBtn:hover {
+    background: var(--ysw-blue);
+    border-color: var(--ysw-blue);
+    color: #fff;
+}
+
+/* Currency toggle */
+.yswCurrencyToggle {
+    display: inline-flex;
+    margin-top: 28px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.yswCurrencyBtn {
+    border: none;
+    cursor: pointer;
+    background: rgba(4, 44, 101, 0.08);
+    color: var(--ysw-blue);
+    font-family: "Mona Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 8px 22px;
+    transition: all 0.2s ease;
+    font-variation-settings: 'wght' 600, 'wdth' 125;
+}
+
+.yswCurrencyBtn.active {
+    background: var(--ysw-blue);
+    color: #fff;
+}
+
+/* Arrival cards */
+.yswArrivalsCarousel {
+    margin-top: 32px;
+}
+
+.yswArrivalCard {
+    background-color: #fff;
+}
+
+.yswArrivalImageWrap {
+    position: relative;
+    width: 100%;
+    padding-top: 75%;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.yswArrivalImageWrap img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.yswArrivalCard:hover .yswArrivalImageWrap img {
+    transform: scale(1.05);
+}
+
+.yswArrivalInfo {
+    padding: 20px 4px 22px;
+    border-bottom: 1px solid var(--ysw-d9);
+}
+
+.yswArrivalInfo .yswEyebrow {
+    font-size: 16px;
+}
+
+.yswArrivalInfo .yswH3 {
+    margin-top: 8px;
+}
+
+.yswArrivalPrice {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    margin-top: 6px;
+    font-variation-settings: 'wght' 600, 'wdth' 125;
+}
+
+.yswArrivalMonthly {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--ysw-slate);
+    margin-left: 8px;
+    font-variation-settings: 'wght' 400, 'wdth' 100;
+}
+
+.yswArrivalSpec {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 14px;
+    font-variation-settings: 'wght' 400, 'wdth' 100;
+}
+
+.yswArrivalsFoot {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 28px;
+}
+
+/* ============================================================
+   BROKERAGE & TRADE-INS
+   ============================================================ */
+.yswBrokerage {
+    padding: 30px 0 110px;
+    background-color: #fff;
+}
+
+.yswBrokerageImageWrap {
+    position: relative;
+    width: 100%;
+    padding-top: 68%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.yswBrokerageImageWrap img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.yswBrokerageText {
+    max-width: 560px;
+    margin-left: auto;
+}
+
+.yswBrokerageText .yswH2 {
+    margin-top: 8px;
+}
+
+/* ============================================================
+   OUR SERVICES & COMMUNITY
+   ============================================================ */
+.yswServices {
+    padding: 30px 0 120px;
+    background-color: #fff;
+}
+
+.yswServicesHead {
+    margin-bottom: 48px;
+}
+
+.yswServiceCard {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.yswServiceCardWide {
+    width: 100%;
+    padding-top: 48.6%;
+}
+
+.yswServiceCardTall {
+    width: 100%;
+    padding-top: 100%;
+    margin-top: 40px;
+}
+
+.yswServiceImg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.yswServiceCard:hover .yswServiceImg {
+    transform: scale(1.05);
+}
+
+.yswServiceGradient {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(180deg, rgba(0, 11, 27, 0) 0%, rgba(0, 11, 27, 0.9) 100%);
+}
+
+.yswServiceGradientLeft {
+    height: 100%;
+    background:
+        linear-gradient(90deg, rgba(4, 44, 101, 0.85) 0%, rgba(4, 44, 101, 0) 55%),
+        linear-gradient(180deg, rgba(0, 11, 27, 0) 45%, rgba(0, 11, 27, 0.85) 100%);
+}
+
+.yswServiceContent {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 0 56px 48px;
+}
+
+.yswServiceContent .yswArrowLink {
+    margin-top: 16px;
+}
+
+/* ============================================================
+   TESTIMONIAL
+   ============================================================ */
+.yswTestimonial {
+    background-color: var(--ysw-lightest-blue);
+    padding: 80px 0;
+}
+
+.yswTestimonialInner {
+    max-width: 904px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 104px;
+}
+
+.yswQuoteMark {
+    position: absolute;
+    left: 0;
+    top: -18px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 120px;
+    line-height: 1;
+    color: var(--ysw-blue);
+}
+
+.yswTestimonialText {
+    color: var(--ysw-slate);
+}
+
+.yswTestimonialName {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-top: 24px;
+    font-variation-settings: 'wght' 700, 'wdth' 100;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.yswFooter {
+    background-color: #fff;
+    border-top: 1px solid var(--ysw-e6);
+    padding-top: 64px;
+}
+
+.yswFooterTop {
+    padding-bottom: 64px;
+}
+
+.yswFooterBrand {
+    display: flex;
+    flex-direction: column;
+}
+
+.yswLogoFooter {
+    width: 150px;
+    padding: 26px 14px 28px;
+    gap: 14px;
+}
+
+.yswLogoFooter .yswLogoSail {
+    width: 82px;
+}
+
+.yswLogoFooter .yswLogoText span {
+    font-size: 27px;
+    letter-spacing: 2px;
+    padding: 8px 0;
+}
+
+.yswFooterPhones {
+    margin-top: 32px;
+}
+
+.yswFooterLoc {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ysw-blue);
+    opacity: 0.6;
+    margin-top: 16px;
+    font-variation-settings: 'wght' 400, 'wdth' 125;
+}
+
+.yswFooterPhone {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--ysw-blue);
+    display: block;
+    margin-top: 2px;
+    font-variation-settings: 'wght' 600, 'wdth' 125;
+}
+
+.yswFooterPhone:hover {
+    opacity: 0.7;
+}
+
+/* Compass panel */
+.yswCompassPanel {
+    background-color: var(--ysw-lightest-blue);
+    border-radius: 8px;
+    padding: 48px 56px;
+}
+
+.yswCompassForm {
+    display: flex;
+    margin-top: 24px;
+    max-width: 480px;
+}
+
+.yswCompassInput {
+    flex: 1;
+    min-width: 0;
+    border: 1px solid var(--ysw-d9);
+    border-right: none;
+    border-radius: 4px 0 0 4px;
+    background: #fff;
+    padding: 12px 18px;
+    font-family: "Mona Sans", sans-serif;
+    font-size: 16px;
+    color: var(--ysw-blackish);
+    outline: none;
+}
+
+.yswCompassInput::placeholder {
+    color: rgba(27, 32, 38, 0.6);
+}
+
+.yswCompassInput:focus {
+    border-color: var(--ysw-blue);
+}
+
+.yswCompassForm .yswBtnPrimary {
+    border-radius: 0 4px 4px 0;
+    flex-shrink: 0;
+}
+
+/* Footer link columns */
+.yswFooterCols {
+    margin-top: 48px;
+}
+
+.yswFooterColHead {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ysw-blue);
+    margin-bottom: 18px;
+    font-variation-settings: 'wght' 600, 'wdth' 125;
+}
+
+.yswFooterLinks li {
+    margin-bottom: 10px;
+}
+
+.yswFooterLinks li a {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--ysw-slate);
+    transition: color 0.2s ease;
+    font-variation-settings: 'wght' 400, 'wdth' 100;
+}
+
+.yswFooterLinks li a:hover {
+    color: var(--ysw-blue);
+}
+
+/* Footer bottom */
+.yswFooterBottom {
+    border-top: 1px solid var(--ysw-e6);
+    padding: 24px 40px;
+}
+
+.yswFooterPolicy {
+    font-family: "Segoe UI", "Mona Sans", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--ysw-text-gray);
+    text-align: center;
+}
+
+/* ============================================================
+   RESPONSIVE — ≤ 1200px
+   ============================================================ */
+@media (max-width: 1200px) {
+    .yswH1 {
+        font-size: 64px;
+        line-height: 72px;
+    }
+
+    .yswHeaderInner {
+        gap: 24px;
+    }
+
+    .yswNavLinks {
+        gap: 24px;
+    }
+
+    .yswPromoCarousel.owl-carousel .owl-dots {
+        left: 40px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — ≤ 991px (tablet / mobile)
+   ============================================================ */
+@media (max-width: 991px) {
+
+    .yswContainer,
+    .yswHeaderInner {
+        padding: 0 24px;
+    }
+
+    /* Header */
+    .yswHeader {
+        height: 64px;
+    }
+
+    .yswHeaderInner {
+        height: 64px;
+    }
+
+    .yswHeader .yswLogo {
+        width: 72px;
+        padding: 10px 6px 12px;
+        gap: 6px;
+    }
+
+    .yswHeader .yswLogoSail {
+        width: 38px;
+    }
+
+    .yswHeader .yswLogoText span {
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding: 3px 0;
+    }
+
+    .yswHeaderContact,
+    .yswNav,
+    .yswDiscoverLink {
+        display: none;
+    }
+
+    .yswHeaderRight {
+        margin-left: auto;
+    }
+
+    /* Hero */
+    .yswHero {
+        height: 600px;
+    }
+
+    .yswHeroActions {
+        margin-top: 32px;
+        gap: 24px;
+    }
+
+    .yswH1 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+
+    .yswH2 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    /* New / Pre-Owned */
+    .yswYachtType {
+        height: 420px;
+    }
+
+    .yswYachtTypeContent {
+        padding: 0 32px 40px;
+    }
+
+    /* Founded */
+    .yswFounded {
+        padding: 64px 0;
+    }
+
+    /* Promo */
+    .yswPromoSlide {
+        height: 560px;
+    }
+
+    .yswPromoContent {
+        bottom: 110px;
+    }
+
+    /* Collection */
+    .yswCollection {
+        padding: 60px 0;
+    }
+
+    .yswCollectionHead {
+        margin-bottom: 40px;
+    }
+
+    .yswCollectionLogos {
+        gap: 32px 48px;
+    }
+
+    /* Welcome */
+    .yswWelcome {
+        padding: 24px 0 72px;
+    }
+
+    .yswWelcomeText {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    /* Recent arrivals */
+    .yswArrivals,
+    .yswBrokerage {
+        padding: 20px 0 72px;
+    }
+
+    .yswBrokerageText {
+        max-width: 100%;
+        margin: 40px 0 0;
+    }
+
+    /* Services */
+    .yswServices {
+        padding: 20px 0 72px;
+    }
+
+    .yswServicesHead {
+        margin-bottom: 32px;
+    }
+
+    .yswServicesHead .yswH2 {
+        margin-bottom: 16px;
+    }
+
+    .yswServiceContent {
+        padding: 0 32px 36px;
+    }
+
+    .yswServiceCardTall {
+        margin-top: 24px;
+    }
+
+    /* Testimonial */
+    .yswTestimonial {
+        padding: 56px 0;
+    }
+
+    .yswTestimonialInner {
+        padding-left: 0;
+        padding-top: 56px;
+    }
+
+    .yswQuoteMark {
+        top: -10px;
+        font-size: 90px;
+    }
+
+    /* Footer */
+    .yswFooter {
+        padding-top: 48px;
+    }
+
+    .yswFooterTop {
+        padding-bottom: 48px;
+    }
+
+    .yswFooterBrand {
+        align-items: flex-start;
+        margin-bottom: 40px;
+    }
+
+    .yswCompassPanel {
+        padding: 36px 28px;
+    }
+
+    .yswFooterCols {
+        margin-top: 40px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — ≤ 575px (small mobile)
+   ============================================================ */
+@media (max-width: 575px) {
+    .yswH1 {
+        font-size: 38px;
+        line-height: 44px;
+    }
+
+    .yswH2 {
+        font-size: 26px;
+        line-height: 32px;
+    }
+
+    .yswH5 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .yswEyebrow {
+        font-size: 16px;
+    }
+
+    .yswHero {
+        height: 540px;
+    }
+
+    .yswHeroActions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .yswYachtTypes {
+        flex-direction: column;
+    }
+
+    .yswYachtType {
+        height: 340px;
+    }
+
+    .yswYachtTypeContent {
+        padding: 0 24px 32px;
+    }
+
+    .yswFounded {
+        padding: 48px 0;
+    }
+
+    .yswPromoSlide {
+        height: 460px;
+    }
+
+    .yswPromoContent {
+        bottom: 96px;
+    }
+
+    .yswPromoCarousel.owl-carousel .owl-nav button.owl-prev,
+    .yswPromoCarousel.owl-carousel .owl-nav button.owl-next {
+        width: 44px;
+        height: 44px;
+        bottom: 40px;
+    }
+
+    .yswPromoCarousel.owl-carousel .owl-nav button.owl-prev {
+        right: 84px;
+    }
+
+    .yswPromoCarousel.owl-carousel .owl-nav button.owl-next {
+        right: 24px;
+    }
+
+    .yswPromoCarousel.owl-carousel .owl-dots {
+        bottom: 52px;
+        left: 24px;
+    }
+
+    .yswCollectionLogos {
+        gap: 28px 36px;
+    }
+
+    .yswBrandWordmark {
+        font-size: 24px;
+    }
+
+    .yswArrivalsHead {
+        flex-wrap: wrap;
+    }
+
+    .yswCarouselBtn {
+        width: 52px;
+        height: 52px;
+    }
+
+    .yswServiceContent {
+        padding: 0 24px 28px;
+    }
+
+    .yswServiceContent .yswH2 {
+        font-size: 24px;
+    }
+
+    .yswTestimonialInner {
+        padding-top: 48px;
+    }
+
+    .yswCompassForm {
+        flex-direction: column;
+    }
+
+    .yswCompassInput {
+        border-right: 1px solid var(--ysw-d9);
+        border-radius: 4px;
+        margin-bottom: 12px;
+    }
+
+    .yswCompassForm .yswBtnPrimary {
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    .yswFooterPolicy {
+        font-size: 14px;
+    }
+}
+
+/* ============================================================
+   ABOUT PAGE — CSS
+   Design: Figma node 43:3712
+   Reuses: header, footer, hero shell, typography & button utilities
+   ============================================================ */
+
+/* --- Hero (short variant) --- */
+.yswHeroShort {
+    height: 720px;
+}
+
+/* --- About Us intro --- */
+.abtIntro {
+    padding: 110px 0 120px;
+    background-color: #fff;
+}
+
+.abtIntroInner {
+    max-width: 1000px;
+}
+
+.abtIntroHeading {
+    margin-top: 10px;
+    max-width: 960px;
+}
+
+/* --- Full-width image band (shared) --- */
+.yswFullImage {
+    width: 100%;
+    line-height: 0;
+}
+
+.yswFullImage img {
+    width: 100%;
+    height: 880px;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- Card grid: image + title + text (shared) --- */
+.yswCardGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px 80px;
+}
+
+.yswCardImgWrap {
+    position: relative;
+    width: 100%;
+    padding-top: 62.66%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.yswCardImgWrap img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.yswCardItem:hover .yswCardImgWrap img {
+    transform: scale(1.05);
+}
+
+.yswCardTitle {
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+/* --- Our Values --- */
+.abtValues {
+    padding: 110px 0;
+    background-color: #fff;
+}
+
+.abtValuesFoot {
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+}
+
+/* --- Our Leadership --- */
+.abtLeadership {
+    padding: 10px 0 120px;
+    background-color: #fff;
+}
+
+.abtLeadershipImageWrap {
+    position: relative;
+    width: 100%;
+    padding-top: 68%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.abtLeadershipImageWrap img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.abtLeadershipText {
+    max-width: 560px;
+    margin-left: auto;
+}
+
+.abtLeadershipText .yswH2 {
+    margin-top: 8px;
+}
+
+.abtLeadList {
+    list-style: disc;
+    padding-left: 22px;
+    margin-top: 16px;
+}
+
+.abtLeadList li {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--ysw-slate);
+    margin-bottom: 12px;
+    font-variation-settings: 'wght' 400, 'wdth' 100;
+}
+
+.abtLeadList li:last-child {
+    margin-bottom: 0;
+}
+
+.abtLeadLabel {
+    font-weight: 700;
+    color: var(--ysw-slate);
+    font-variation-settings: 'wght' 700, 'wdth' 100;
+}
+
+/* --- About responsive --- */
+@media (max-width: 991px) {
+    .yswHeroShort {
+        height: 520px;
+    }
+
+    .abtIntro {
+        padding: 64px 0 72px;
+    }
+
+    .yswFullImage img {
+        height: 480px;
+    }
+
+    .abtValues {
+        padding: 64px 0;
+    }
+
+    .yswCardGrid {
+        gap: 48px 32px;
+    }
+
+    .abtLeadership {
+        padding: 0 0 72px;
+    }
+
+    .abtLeadershipImageWrap {
+        margin-bottom: 40px;
+    }
+
+    .abtLeadershipText {
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .yswHeroShort {
+        height: 440px;
+    }
+
+    .abtIntro {
+        padding: 48px 0 56px;
+    }
+
+    .yswFullImage img {
+        height: 300px;
+    }
+
+    .abtValues {
+        padding: 48px 0;
+    }
+
+    .yswCardGrid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .abtValuesFoot {
+        margin-top: 44px;
+    }
+
+    .abtValuesFoot .yswBtnOutlineBlue {
+        width: 100%;
+    }
+
+    .abtLeadership {
+        padding: 0 0 56px;
+    }
+}
+
+/* ============================================================
+   SELL / TRADE PAGE — CSS
+   Design: Figma node 47:1082
+   Reuses: header, footer, hero shell, card grid, full-image band,
+           shared form block (.yswForm*), typography & button utilities
+   ============================================================ */
+
+/* --- Intro --- */
+.srtIntro {
+    padding: 110px 0 120px;
+    background-color: #fff;
+}
+
+.srtIntroInner {
+    max-width: 1000px;
+}
+
+.srtIntroHeading {
+    margin-top: 10px;
+    max-width: 1000px;
+}
+
+.srtIntroActions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px 36px;
+    margin-top: 36px;
+}
+
+/* --- Advantages --- */
+.srtAdvantages {
+    padding: 110px 0 120px;
+    background-color: #fff;
+}
+
+.srtAdvantagesHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 56px;
+}
+
+.srtAdvantagesHead .yswH2 {
+    max-width: 560px;
+}
+
+.srtAdvantagesHead .yswBtnOutlineBlue {
+    flex-shrink: 0;
+}
+
+/* --- Submit Boat for Review form --- */
+.yswForm {
+    background-color: var(--ysw-lightest-blue);
+    padding: 100px 0;
+}
+
+.yswFormText {
+    max-width: 470px;
+}
+
+.yswFormLocations {
+    margin-top: 40px;
+}
+
+.yswFormLoc {
+    margin-top: 28px;
+}
+
+.yswFormLoc:first-child {
+    margin-top: 0;
+}
+
+.yswFormPhone {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--ysw-blue);
+    display: block;
+    margin: 6px 0;
+    font-variation-settings: 'wght' 600, 'wdth' 125;
+}
+
+.yswFormPhone:hover {
+    opacity: 0.7;
+}
+
+.yswFormCard {
+    max-width: 480px;
+    margin-left: auto;
+    width: 100%;
+}
+
+.yswField {
+    margin-bottom: 16px;
+}
+
+.yswInput {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid var(--ysw-e6);
+    border-radius: 4px;
+    padding: 12px 18px;
+    font-family: "Mona Sans", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--ysw-blackish);
+    outline: none;
+    transition: border-color 0.2s ease;
+    font-variation-settings: 'wght' 400, 'wdth' 100;
+}
+
+.yswInput::placeholder {
+    color: rgba(51, 51, 51, 0.6);
+}
+
+.yswInput:focus {
+    border-color: var(--ysw-blue);
+}
+
+.yswTextarea {
+    height: 96px;
+    resize: vertical;
+}
+
+.yswRadioLabel {
+    margin: 4px 0 12px;
+}
+
+.yswRadioGroup {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 20px;
+}
+
+.yswRadio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-family: "Mona Sans", sans-serif;
+    font-size: 16px;
+    color: var(--ysw-slate);
+    margin: 0;
+    font-variation-settings: 'wght' 400, 'wdth' 100;
+}
+
+.yswRadio input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--ysw-blue);
+    cursor: pointer;
+}
+
+.yswSubmitBtn {
+    margin-top: 8px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* --- Sell/Trade responsive --- */
+@media (max-width: 991px) {
+    .srtIntro {
+        padding: 64px 0 72px;
+    }
+
+    .srtAdvantages {
+        padding: 64px 0 72px;
+    }
+
+    .srtAdvantagesHead {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        margin-bottom: 40px;
+    }
+
+    .yswForm {
+        padding: 64px 0;
+    }
+
+    .yswFormText {
+        max-width: 100%;
+        margin-bottom: 48px;
+    }
+
+    .yswFormCard {
+        margin-left: 0;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 575px) {
+    .srtIntro {
+        padding: 48px 0 56px;
+    }
+
+    .srtAdvantages {
+        padding: 48px 0 56px;
+    }
+
+    .srtIntroActions .yswBtnOutlineBlue {
+        width: 100%;
+    }
+
+    .srtAdvantagesHead .yswBtnOutlineBlue {
+        width: 100%;
+    }
+
+    .yswForm {
+        padding: 48px 0;
+    }
+}
+
+/* ============================================================
+   BRAND PAGE — CSS
+   Design: Figma node 74:1311
+   Reuses: header, footer, hero shell, listing cards, currency
+           toggle, shared form block, typography & buttons
+   ============================================================ */
+
+/* --- Hero (mid variant) --- */
+.yswHeroMid {
+    height: 800px;
+}
+
+/* --- Brand intro band --- */
+.brdIntro {
+    background-color: var(--ysw-lightest-blue);
+    padding: 80px 0;
+}
+
+.brdIntroInner {
+    max-width: 940px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.brdIntroLogo {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 44px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--ysw-blue);
+    margin-bottom: 28px;
+    font-variation-settings: 'wght' 600, 'wdth' 110;
+}
+
+.brdIntroText {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* --- Models ("Sailing is about feeling") --- */
+.brdModels {
+    padding: 90px 0 110px;
+    background-color: #fff;
+}
+
+.brdModelsHead {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.brdModelsText {
+    max-width: 880px;
+    margin: 16px auto 0;
+}
+
+.brdDivider {
+    display: block;
+    width: 80px;
+    height: 2px;
+    background-color: var(--ysw-blue);
+    margin: 28px auto 0;
+}
+
+.brdModelGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px 32px;
+}
+
+.brdModelCard {
+    display: block;
+    color: inherit;
+}
+
+.brdModelImgWrap {
+    position: relative;
+    width: 100%;
+    padding-top: 137.5%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.brdModelImgWrap img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.brdModelCard:hover .brdModelImgWrap img {
+    transform: scale(1.05);
+}
+
+.brdModelTitle {
+    margin-top: 22px;
+    margin-bottom: 4px;
+}
+
+.brdModelSub {
+    font-family: "Mona Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--ysw-blue);
+    opacity: 0.6;
+    font-variation-settings: 'wght' 400, 'wdth' 125;
+}
+
+/* --- Banner ("Dufour. For those who live for the open air.") --- */
+.brdBanner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.brdBannerImg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brdBannerOverlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(4, 44, 101, 0.6);
+}
+
+.brdBannerInner {
+    position: relative;
+    z-index: 2;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 0;
+}
+
+.brdBannerContent {
+    max-width: 840px;
+    text-align: center;
+}
+
+.brdBannerText {
+    margin-top: 20px;
+}
+
+.brdBannerActions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px 24px;
+    margin-top: 36px;
+}
+
+/* --- In Stock listings --- */
+.brdInStock {
+    padding: 110px 0 120px;
+    background-color: #fff;
+}
+
+.brdInStockHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.brdListingGrid [class*="col-"] {
+    margin-bottom: 56px;
+}
+
+/* --- Brand page responsive --- */
+@media (max-width: 991px) {
+    .yswHeroMid {
+        height: 520px;
+    }
+
+    .brdIntro {
+        padding: 56px 0;
+    }
+
+    .brdIntroLogo {
+        font-size: 36px;
+    }
+
+    .brdModels {
+        padding: 64px 0 72px;
+    }
+
+    .brdModelsHead {
+        margin-bottom: 44px;
+    }
+
+    .brdModelGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px 24px;
+    }
+
+    .brdBannerInner {
+        min-height: 480px;
+        padding: 64px 0;
+    }
+
+    .brdInStock {
+        padding: 64px 0 24px;
+    }
+
+    .brdListingGrid [class*="col-"] {
+        margin-bottom: 44px;
+    }
+}
+
+@media (max-width: 575px) {
+    .yswHeroMid {
+        height: 460px;
+    }
+
+    .brdIntro {
+        padding: 44px 0;
+    }
+
+    .brdIntroLogo {
+        font-size: 30px;
+    }
+
+    .brdModels {
+        padding: 48px 0 56px;
+    }
+
+    .brdModelGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px 20px;
+    }
+
+    .brdBannerInner {
+        min-height: 420px;
+        padding: 56px 0;
+    }
+
+    .brdBannerActions .yswBtnOutlineWhite {
+        width: 100%;
+    }
+
+    .brdInStock {
+        padding: 48px 0 8px;
+    }
+
+    .brdInStockHead {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        margin-bottom: 36px;
+    }
+}
+
+/* ============================================================
+   SERVICE PAGE — CSS
+   Design: Figma node 52:858
+   Reuses: header, footer, hero shell, carousel buttons, shared
+           form block, typography & button utilities
+   ============================================================ */
+
+/* --- Intro --- */
+.svcIntro {
+    padding: 110px 0 120px;
+    background-color: #fff;
+}
+
+.svcIntroInner {
+    max-width: 1000px;
+}
+
+.svcIntroHeading {
+    margin-top: 10px;
+}
+
+/* --- Core Service Capabilities --- */
+.svcCapabilities {
+    background-color: var(--ysw-lightest-blue);
+    padding: 100px 0;
+}
+
+.svcCapLayout {
+    display: flex;
+    align-items: flex-start;
+    gap: 56px;
+}
+
+.svcCapHead {
+    width: 420px;
+    flex-shrink: 0;
+}
+
+.svcCapNav {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.svcCapCarouselWrap {
+    flex: 1;
+    min-width: 0;
+}
+
+.svcCapImgWrap {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.svcCapImgWrap img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.svcCapCard:hover .svcCapImgWrap img {
+    transform: scale(1.05);
+}
+
+.svcCapTitle {
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+/* --- Peace of Mind (image + text) --- */
+.svcCourse {
+    background-color: #fff;
+    padding: 100px 0 120px;
+}
+
+.svcCourseImageWrap {
+    position: relative;
+    width: 100%;
+    padding-top: 68%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.svcCourseImageWrap img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.svcCourseText {
+    max-width: 560px;
+    margin-left: auto;
+}
+
+.svcCourseText .yswH2 {
+    margin-top: 8px;
+}
+
+/* --- Service responsive --- */
+@media (max-width: 991px) {
+    .svcIntro {
+        padding: 64px 0 72px;
+    }
+
+    .svcCapabilities {
+        padding: 64px 0;
+    }
+
+    .svcCapLayout {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .svcCapHead {
+        width: 100%;
+    }
+
+    .svcCapNav {
+        margin-top: 24px;
+    }
+
+    .svcCourse {
+        padding: 0 0 72px;
+    }
+
+    .svcCourseImageWrap {
+        margin-bottom: 40px;
+    }
+
+    .svcCourseText {
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .svcIntro {
+        padding: 48px 0 56px;
+    }
+
+    .svcCapabilities {
+        padding: 48px 0;
+    }
+
+    .svcCourse {
+        padding: 0 0 56px;
+    }
+}
+
+/* ============================================================
+   JOURNAL PAGE — CSS
+   Design: Figma node 43:4053
+   Reuses: header, footer, hero shell, typography, arrow link &
+           button utilities
+   ============================================================ */
+
+/* --- Hero (slim variant) --- */
+.yswHeroSlim {
+    height: 480px;
+}
+
+.yswHeroSlim .yswHeroOverlay {
+    background: rgba(4, 44, 101, 0.62);
+}
+
+.jrnHeroSub {
+    max-width: 880px;
+    margin-top: 20px;
+}
+
+/* --- Top Entry --- */
+.jrnTop {
+    padding: 90px 0;
+    background-color: #fff;
+}
+
+.jrnTopImageWrap {
+    position: relative;
+    width: 100%;
+    padding-top: 68%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.jrnTopImageWrap img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.jrnTopText {
+    max-width: 560px;
+    margin-left: auto;
+}
+
+.jrnTopText .yswH2 {
+    margin-top: 8px;
+}
+
+/* --- Entries --- */
+.jrnEntries {
+    padding: 80px 0 110px;
+    border-top: 1px solid var(--ysw-e6);
+    background-color: #fff;
+}
+
+.jrnEntriesHead {
+    margin-bottom: 28px;
+}
+
+.jrnTabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 36px;
+    margin-bottom: 52px;
+}
+
+.jrnTab {
+    position: relative;
+    background: none;
+    border: none;
+    padding: 0 0 10px;
+    cursor: pointer;
+    font-family: "Mona Sans", sans-serif;
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--ysw-slate);
+    transition: color 0.2s ease;
+    font-variation-settings: 'wght' 320, 'wdth' 125;
+}
+
+.jrnTab:hover {
+    color: var(--ysw-blue);
+}
+
+.jrnTab.active {
+    color: var(--ysw-blue);
+}
+
+.jrnTab.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 24px;
+    height: 2px;
+    background-color: var(--ysw-blue);
+}
+
+/* --- Article cards --- */
+.jrnGrid [class*="col-"] {
+    margin-bottom: 56px;
+}
+
+.jrnCardImgWrap {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-top: 54.55%;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.jrnCardImgWrap img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.jrnCard:hover .jrnCardImgWrap img {
+    transform: scale(1.05);
+}
+
+.jrnCardCat {
+    margin-top: 24px;
+}
+
+.jrnCardTitle {
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
+.jrnCard .yswArrowLink {
+    margin-top: 18px;
+}
+
+/* --- Journal responsive --- */
+@media (max-width: 991px) {
+    .yswHeroSlim {
+        height: 400px;
+    }
+
+    .jrnTop {
+        padding: 64px 0;
+    }
+
+    .jrnTopImageWrap {
+        margin-bottom: 40px;
+    }
+
+    .jrnTopText {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .jrnEntries {
+        padding: 56px 0 24px;
+    }
+
+    .jrnGrid [class*="col-"] {
+        margin-bottom: 44px;
+    }
+}
+
+@media (max-width: 575px) {
+    .yswHeroSlim {
+        height: 360px;
+    }
+
+    .jrnTop {
+        padding: 48px 0;
+    }
+
+    .jrnEntries {
+        padding: 48px 0 8px;
+    }
+
+    .jrnTabs {
+        gap: 14px 24px;
+        margin-bottom: 36px;
+    }
+
+    .jrnTab {
+        font-size: 18px;
+    }
+}
