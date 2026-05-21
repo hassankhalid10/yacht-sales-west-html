@@ -3314,3 +3314,279 @@ img {
         padding: 32px 28px;
     }
 }
+
+/* ============================================================
+   TEAM PAGE — CSS
+   Design: Figma node 80:1746
+   Reuses: header, footer, typography, brand divider & buttons
+   ============================================================ */
+
+/* --- Intro --- */
+.tmIntro {
+    padding: 100px 0 80px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.tmIntroInner {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.tmIntroHeading {
+    margin-top: 10px;
+}
+
+.tmIntroText {
+    max-width: 1080px;
+    margin: 24px auto 0;
+}
+
+.tmIntroNote {
+    margin-top: 4px;
+}
+
+/* --- Team grid --- */
+.tmGrid {
+    padding: 0 0 120px;
+    background-color: #fff;
+}
+
+.tmGridInner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px 40px;
+}
+
+.tmCard {
+    position: relative;
+    width: 100%;
+    padding-top: 160%;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.tmCardImg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.tmCard:hover .tmCardImg {
+    transform: scale(1.05);
+}
+
+.tmCardGradient {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 52%;
+    background: linear-gradient(180deg, rgba(4, 44, 101, 0) 0%, rgba(4, 44, 101, 0.9) 100%);
+}
+
+.tmCardContent {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 40px;
+}
+
+.tmCardRole {
+    margin-top: 6px;
+    opacity: 0.85;
+}
+
+.tmCardPlus {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    border: none;
+    background-color: #fff;
+    color: var(--ysw-blue);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.tmCardPlus:hover {
+    background-color: var(--ysw-blue);
+    color: #fff;
+}
+
+/* --- Team responsive --- */
+@media (max-width: 991px) {
+    .tmIntro {
+        padding: 64px 0 56px;
+    }
+
+    .tmGrid {
+        padding: 0 0 72px;
+    }
+
+    .tmGridInner {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 24px;
+    }
+
+    .tmCardContent {
+        padding: 28px;
+    }
+}
+
+@media (max-width: 575px) {
+    .tmIntro {
+        padding: 48px 0 44px;
+    }
+
+    .tmGrid {
+        padding: 0 0 56px;
+    }
+
+    .tmGridInner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+/* ============================================================
+   TESTIMONIALS PAGE — CSS
+   Design: Figma node 80:2261
+   Reuses: header, footer, typography & button utilities
+   ============================================================ */
+
+/* --- Intro --- */
+.tstIntro {
+    padding: 100px 0 80px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.tstIntroHeading {
+    margin-top: 10px;
+}
+
+.tstIntro .yswBtnPrimary {
+    margin-top: 32px;
+}
+
+/* --- Testimonial wall (masonry) --- */
+.tstWall {
+    padding: 0 0 110px;
+    background-color: #fff;
+}
+
+.tstColumns {
+    column-count: 3;
+    column-gap: 40px;
+}
+
+.tstCard {
+    break-inside: avoid;
+    background-color: var(--ysw-lightest-blue);
+    border-radius: 16px;
+    padding: 40px 48px 44px;
+    margin-bottom: 40px;
+}
+
+.tstQuote {
+    font-size: 28px;
+    color: var(--ysw-blue);
+    line-height: 1;
+}
+
+.tstText {
+    margin-top: 20px;
+}
+
+.tstAuthor {
+    margin-top: 24px;
+}
+
+/* --- Video testimonial card --- */
+.tstVideo {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 61.9%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+    background: linear-gradient(135deg, var(--ysw-blue) 0%, var(--ysw-blackish-blue) 100%);
+    cursor: pointer;
+}
+
+.tstVideoPlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.92);
+    color: var(--ysw-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: all 0.25s ease;
+}
+
+.tstVideo:hover .tstVideoPlay {
+    background-color: #fff;
+    transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* --- Testimonials responsive --- */
+@media (max-width: 991px) {
+    .tstIntro {
+        padding: 64px 0 56px;
+    }
+
+    .tstWall {
+        padding: 0 0 72px;
+    }
+
+    .tstColumns {
+        column-count: 2;
+        column-gap: 24px;
+    }
+
+    .tstCard {
+        padding: 32px 32px 36px;
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 575px) {
+    .tstIntro {
+        padding: 48px 0 44px;
+    }
+
+    .tstWall {
+        padding: 0 0 56px;
+    }
+
+    .tstColumns {
+        column-count: 1;
+    }
+
+    .tstIntro .yswBtnPrimary {
+        width: 100%;
+    }
+}
