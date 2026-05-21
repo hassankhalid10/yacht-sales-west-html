@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials | Yacht Sales West</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="yswHeader">
+        <div class="yswHeaderInner">
+
+            <!-- Logo (hanging badge) -->
+            <a href="/" class="yswLogo" aria-label="Yacht Sales West">
+                <svg class="yswLogoSail" viewBox="0 0 140 124" aria-hidden="true">
+                    <path d="M86 6 C46 30 28 66 26 100 L86 100 Z" fill="#fff" />
+                    <path d="M94 34 C104 56 108 80 108 100 L94 100 Z" fill="#fff" />
+                    <path d="M10 106 C46 126 96 126 132 106 L118 106 C94 117 50 117 24 106 Z" fill="#fff" />
+                </svg>
+                <span class="yswLogoText">
+                    <span>Yacht</span>
+                    <span>Sales</span>
+                    <span>West</span>
+                </span>
+            </a>
+
+            <!-- Location + Phone -->
+            <div class="yswHeaderContact">
+                <button type="button" class="yswLocationSelect">
+                    Vancouver <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <a href="tel:+16044881202" class="yswHeaderPhone">(604) 488-1202</a>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="yswNav">
+                <ul class="yswNavLinks">
+                    <li><a href="javascript:void(0)" class="yswNavLink">Yacht Sales</a></li>
+                    <li><a href="javascript:void(0)" class="yswNavLink">Service</a></li>
+                    <li><a href="javascript:void(0)" class="yswNavLink">Events</a></li>
+                    <li><a href="javascript:void(0)" class="yswNavLink">Journal</a></li>
+                </ul>
+            </nav>
+
+            <!-- Right cluster -->
+            <div class="yswHeaderRight">
+                <a href="javascript:void(0)" class="yswDiscoverLink">Discover YSW</a>
+                <button type="button" class="yswHamburger" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ==================== SIDE MENU ==================== -->
+    <div class="yswMenuOverlay"></div>
+    <aside class="yswSideMenu">
+        <div class="yswSideMenuTop">
+            <span class="yswSideMenuTitle">Menu</span>
+            <button type="button" class="yswSideMenuClose" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <ul class="yswSideMenuList">
+            <li><a href="javascript:void(0)">Yacht Sales</a></li>
+            <li><a href="javascript:void(0)">New Yachts</a></li>
+            <li><a href="javascript:void(0)">Pre-Owned Yachts</a></li>
+            <li><a href="javascript:void(0)">Brokerage / Trade-Ins</a></li>
+            <li><a href="javascript:void(0)">Service</a></li>
+            <li><a href="javascript:void(0)">Events</a></li>
+            <li><a href="javascript:void(0)">Journal</a></li>
+            <li><a href="javascript:void(0)">Discover YSW</a></li>
+        </ul>
+        <div class="yswSideMenuContact">
+            <p class="yswSideMenuLoc">Vancouver</p>
+            <a href="tel:+16044881202" class="yswSideMenuPhone">(604) 488-1202</a>
+            <p class="yswSideMenuLoc">Sidney</p>
+            <a href="tel:+12506566644" class="yswSideMenuPhone">(250) 656-6644</a>
+        </div>
+    </aside>
+
+    <!-- ==================== TESTIMONIALS INTRO ==================== -->
+    <section class="tstIntro">
+        <div class="yswContainer">
+            <p class="yswEyebrow yswBlueText">Reviews &amp; Testimonials</p>
+            <h2 class="yswH2 yswBlueText tstIntroHeading">Voices From Our Community</h2>
+            <a href="javascript:void(0)" class="yswBtnPrimary">Write a Testimonial</a>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIAL WALL ==================== -->
+    <section class="tstWall">
+        <div class="yswContainer">
+            <div class="tstColumns">
+
+                <!-- Basil Huxham -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">We highly recommend Yacht Sales West who we engaged to sell
+                        our classic 1987 Mason 33 sailboat. Richard Hargreaves managed and coordinated the entire
+                        process in an efficient and professional manner, including the export and delivery to the USA.
+                        We are highly satisfied with the service we received. Richard has the experience, the expertise
+                        and the energy to get the job done!</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Basil Huxham</p>
+                </div>
+
+                <!-- Jennifer Hatfield -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">The care and attention we have received from the Yacht
+                        Sales West team has been truly wonderful. We were given excellent information and support as we
+                        decided on which sail boat to order. Once the boat arrived the team worked tirelessly to get it
+                        ready and they took care to review all the systems with us. Throughout the first year we have
+                        been impressed by how quickly they have responded to questions. Richard Hargreaves has been
+                        incredibly professional and responsive. The relationship we have with the team, long after
+                        taking possession of the boat, is very much appreciated.</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Jennifer Hatfield</p>
+                </div>
+
+                <!-- Jaclyn Jeffrey -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">We bought a boat through Max. He was really helpful from the
+                        first meeting even when we said we probably weren&rsquo;t going to buy for a couple of years
+                        (haha). He gave us a lot of great advice and didn&rsquo;t ever pressure us to choose one boat
+                        over another, even when we were contemplating a boat from another brokerage. He arranged his
+                        coworkers to show us a boat in Vancouver when he wasn&rsquo;t able to make it as well. During
+                        the sale, he helped us find surveyors and assisted us with getting some mechanical work sorted
+                        out before we could come pick the boat up. The sale was complicated and he was quick to respond
+                        to all our emails and got all the answers the different parties involved needed. He even sorted
+                        out some instruction for us on the new boat. The entire team at YSW was helpful and friendly
+                        throughout the process.</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Jaclyn Jeffrey</p>
+                </div>
+
+                <!-- Charles Russell -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">We purchased a Bavaria sailboat with the help of Max Shaw.
+                        Max was an incredible help figuring out what we needed and then helping us find a boat. Max is
+                        very experienced and knows his way around boats which is incredibly helpful when making a
+                        significant purchase. We have no hesitation in recommending Max Shaw for your next purchase. We
+                        look forward to working with him and Yacht Sales West on our next purchase.</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Charles Russell</p>
+                </div>
+
+                <!-- Sam Owen -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">Had the pleasure of working with YSW to purchase our
+                        sailboat. The team was very professional, knowledgeable, accommodating and just nice to deal
+                        with. Glad we had the opportunity to work with such a great team. Max Shaw was especially great
+                        to work with. He is very knowledgeable and well connected in the area and is a great person to
+                        know. If I ever buy another sailboat I hope it is with YSW!</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Sam Owen</p>
+                </div>
+
+                <!-- Campbell Stewart -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">My experience purchasing our boat through Max at Yacht Sales
+                        West could not have been better. Max listened to concerns and always helped by bringing people
+                        and resources and his own rich knowledge base to the table. I found him invaluable and highly
+                        professional. Max is a true sailor and I recommend him and trust him absolutely.</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Campbell Stewart</p>
+                </div>
+
+                <!-- Deborra Adkins -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">In 2020, we decided it was time to upgrade our sailboat. In
+                        2021, when we looked at our first used sailboat, we met Yacht Sales West broker, Richard
+                        Hargreaves. In spring 2022, we looked at several boats in Victoria with YSW broker, Max Shaw.
+                        Finally in fall 2022, we successfully purchased a 2002 Nauticat 42, working with YSW broker Mike
+                        Carkeek. At the same time, Richard quickly sold our previous 1986 Nauticat 40. Having looked at
+                        a lot of other boats with a lot of brokers over our two year search, we have very high regard
+                        for the service and support we received from all three YSW brokers. Their combined knowledge of
+                        sailboats, their understanding of the complexity of the sale process and their TLC towards us
+                        as they helped us through this process is commendable. Whether you are selling or buying, new
+                        or used, we recommend Yacht Sales West as your brokers of choice.</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Deborra Adkins</p>
+                </div>
+
+                <!-- Dan Clarkson -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">I bought a used C&amp;C 44 from Richard late last Spring.
+                        Problem: I am in Seattle, the boat was in Vancouver, and the border was closed! This was not a
+                        million-dollar sale, but Richard gave it all the time and attention as if it was. If he
+                        couldn&rsquo;t pick up my call, he would promptly return it. He went out of his way to help me
+                        find some of the most reputable and well-credentialed surveyors in Vancouver. We had to take a
+                        virtual sea trial &mdash; Richard and the seller took the boat out to English Bay, with video
+                        cam in-hand, unfurled the sails, cranked the engine, operated the autopilot and electronics,
+                        and showed me around the boat. At every juncture, Richard was a consummate professional,
+                        handling every detail. He arranged the customs brokers, escrow agents, and even a guy to
+                        deliver the boat to Friday Harbor Customs during COVID. I could not have imagined getting
+                        hooked up with a more honest, professional, and careful broker.</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Dan Clarkson</p>
+                </div>
+
+                <!-- Kevin Walker -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">Max Shaw assisted us in finally purchasing a BlueWater
+                        cruiser that was located in St Croix, USVI. Our search involved boats in a lot of places (BC,
+                        USA, Mexico) and was made to be productive and enjoyable largely due to his involvement in the
+                        process. Max is very knowledgeable, thorough, diligent and straight up honest. Our purchase
+                        process was quite complicated and his advice and calm demeanor was key to a successful outcome.
+                        Thank you Max &mdash; you are a credit to the cruising community and YSW!</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Kevin &amp; Shawna</p>
+                </div>
+
+                <!-- Alexey G. -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">Max helped us to purchase our boat from a private seller.
+                        Max was very professional and super responsive through the whole process. We are happy we chose
+                        to work with Max &mdash; he is great!</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Alexey G.</p>
+                </div>
+
+                <!-- Meraki Crew (video testimonial) -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <a href="javascript:void(0)" class="tstVideo" aria-label="Play video testimonial">
+                        <span class="tstVideoPlay"><i class="fa-solid fa-play"></i></span>
+                    </a>
+                    <p class="yswPara yswSlateText tstText">We had the pleasure of working with Max Shaw to purchase
+                        our floating home. Max is a wealth of knowledge, extremely hard working, authentic and kind.
+                        The whole process was seamless and we&rsquo;re so thankful for all that Max did to help kick
+                        start our adventure. Thank you Yacht Sales West! Thank you Max!</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Meraki Crew</p>
+                </div>
+
+                <!-- Mike Janes -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">Max Shaw did a fantastic job selling my sailboat. He put a
+                        lot of time and effort into the process, and kept me updated throughout. I cannot recommend
+                        selling with Max enough. Do yourself a favor and give him a call.</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Mike Janes</p>
+                </div>
+
+                <!-- Charles Russell -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">We purchased a Bavaria sailboat with the help of Max Shaw.
+                        Max was an incredible help figuring out what we needed and then helping us find a boat. Max is
+                        very experienced and knows his way around boats which is incredibly helpful when making a
+                        significant purchase. We have no hesitation in recommending Max Shaw for your next purchase.</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Charles Russell</p>
+                </div>
+
+                <!-- Julie Martin -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">Max made the sales process so easy and smooth for us. I
+                        would have no hesitation in recommending Max Shaw and Yacht Sales West for selling and buying
+                        boats.</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Julie Martin</p>
+                </div>
+
+                <!-- Shaun Murphy -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">Upon the recommendation of a friend I recently purchased a
+                        Dufour 360 from Yacht Sales West and I am delighted with the purchasing experience and the
+                        sailboat. Richard Hargreaves the yacht broker was a great help in ensuring that I got the right
+                        boat and that it was set up just the way I wanted it. He was always available and helpful.
+                        David Bossu the service manager listened to my specific requests (there were many!) and
+                        delivered each of them quickly with meticulous quality. He kept me fully informed at each stage
+                        of commissioning. David Bonar, the owner, kept an eye on things and wanted to know that I was
+                        happy with the purchase. Thanks also to Pat Stewart who handled the paperwork with
+                        professionalism. Even now, after all the payments have been made, I find the staff at Yacht
+                        Sales West eager to offer their assistance with any follow up questions. I highly recommend
+                        this business.</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Shaun Murphy</p>
+                </div>
+
+                <!-- Mark Andreassen -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">We ended up purchasing our boat through Max at Yacht Sales
+                        West, and we had a very smooth experience all the way through. We did not encounter any
+                        pressure, or undue guidance at all. In fact it was just pure honesty and helpfulness that we
+                        encountered. We dealt with a few members of the team and were always greeted with warmth and
+                        respect. Nothing bad to say from our experience and would recommend this company for any
+                        selling or purchasing needs! As an aside, after the sale completed, it was noticed that the
+                        refrigerator didn&rsquo;t actually work &mdash; they fixed it for us before they let us take
+                        the boat. Still works!</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Mark Andreassen</p>
+                </div>
+
+                <!-- Stefa Katamay -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">We sold our boat with Max Shaw of Yacht Sales West as our
+                        broker. Couldn&rsquo;t have asked for a more professional and smooth experience. Max knows
+                        boats and people. He navigated us through the emotional process of selling while also balancing
+                        our desires with reality. Couldn&rsquo;t have asked for a better broker!</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Stefa Katamay</p>
+                </div>
+
+                <!-- Alex Morgan -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">I bought my boat there. Mike and Max in Sidney are the ones
+                        to see. 1st rate customer service.</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Alex Morgan</p>
+                </div>
+
+                <!-- Ethan Schlegel -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">We had the pleasure of working with Max Shaw as a
+                        buyer&rsquo;s broker on two separate offers. The first with another brokerage&rsquo;s listing
+                        that ended up falling through, and secondly with a listing at Yacht Sales West with Mike as the
+                        seller&rsquo;s broker. Both of whom were great to work with and provided a wealth of
+                        information. Max was truly exceptional; knowledgeable, forthright, and always in communication
+                        at each step. He went above and beyond helping to organize additional surveys and estimates,
+                        import to the US, temporary moorage, and delivery as our primary residence is some 2,000 miles
+                        away. I would highly recommend considering YSW for their extensive knowledge and outstanding
+                        customer service.</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Ethan Schlegel</p>
+                </div>
+
+                <!-- La J -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">Max made acquiring my beautiful Pacific Seacraft 34 a
+                        relatively seamless process. He&rsquo;s extremely knowledgeable, personable, and very
+                        accessible. I thoroughly enjoyed working with him, and learned a lot during the process. I
+                        highly recommend Max on all levels if you&rsquo;re thinking of acquiring a boat. Many thanks
+                        again, Max!</p>
+                    <p class="yswH5 yswSlateText tstAuthor">La J</p>
+                </div>
+
+                <!-- Tom and Jean -->
+                <div class="tstCard">
+                    <i class="fa-solid fa-quote-left tstQuote"></i>
+                    <p class="yswPara yswSlateText tstText">We listed our sailboat with Max Shaw of Yacht Sales West in
+                        Sidney in the fall of 2021. Max was very professional, exceptionally helpful with any concerns
+                        that we had, and a pleasure to deal with. Max was efficient in the sale of the boat and paid
+                        great attention to communication in all aspects. We have no hesitation in buying or selling
+                        another boat with Yacht Sales West again.</p>
+                    <p class="yswH5 yswSlateText tstAuthor">Tom &amp; Jean</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="yswFooter">
+        <div class="yswContainer">
+            <div class="row yswFooterTop">
+
+                <!-- Logo + phones -->
+                <div class="col-lg-4">
+                    <div class="yswFooterBrand">
+                        <a href="/" class="yswLogo yswLogoFooter" aria-label="Yacht Sales West">
+                            <svg class="yswLogoSail" viewBox="0 0 140 124" aria-hidden="true">
+                                <path d="M86 6 C46 30 28 66 26 100 L86 100 Z" fill="#fff" />
+                                <path d="M94 34 C104 56 108 80 108 100 L94 100 Z" fill="#fff" />
+                                <path d="M10 106 C46 126 96 126 132 106 L118 106 C94 117 50 117 24 106 Z"
+                                    fill="#fff" />
+                            </svg>
+                            <span class="yswLogoText">
+                                <span>Yacht</span>
+                                <span>Sales</span>
+                                <span>West</span>
+                            </span>
+                        </a>
+                        <div class="yswFooterPhones">
+                            <p class="yswFooterLoc">Vancouver</p>
+                            <a href="tel:+16044881202" class="yswFooterPhone">(604) 488-1202</a>
+                            <p class="yswFooterLoc">Sidney</p>
+                            <a href="tel:+12506566644" class="yswFooterPhone">(250) 656-6644</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compass panel + link columns -->
+                <div class="col-lg-8">
+                    <div class="yswCompassPanel">
+                        <h2 class="yswH2 yswBlueText">Set Your Compass</h2>
+                        <p class="yswPara yswSlateText mt-2">Subscribe to receive our latest vessel listings, exclusive
+                            event invitations, and expert maritime insights tailored for the discerning yachtsman.</p>
+                        <form class="yswCompassForm" onsubmit="return false">
+                            <input type="email" class="yswCompassInput" placeholder="Enter email">
+                            <button type="submit" class="yswBtnPrimary">Connect</button>
+                        </form>
+                    </div>
+
+                    <div class="row yswFooterCols">
+                        <div class="col-md-4 col-6">
+                            <h6 class="yswFooterColHead">Sales</h6>
+                            <ul class="yswFooterLinks">
+                                <li><a href="javascript:void(0)">All Yachts For Sale</a></li>
+                                <li><a href="javascript:void(0)">New Yachts</a></li>
+                                <li><a href="javascript:void(0)">Pre-Owned Yachts</a></li>
+                                <li><a href="javascript:void(0)">Broker / Trade My Boat</a></li>
+                                <li><a href="javascript:void(0)">Financing</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-6">
+                            <h6 class="yswFooterColHead">Support</h6>
+                            <ul class="yswFooterLinks">
+                                <li><a href="javascript:void(0)">Journal</a></li>
+                                <li><a href="javascript:void(0)">Service Center</a></li>
+                                <li><a href="javascript:void(0)">Parts</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <h6 class="yswFooterColHead">Company</h6>
+                            <ul class="yswFooterLinks">
+                                <li><a href="javascript:void(0)">About</a></li>
+                                <li><a href="javascript:void(0)">Events</a></li>
+                                <li><a href="team.html">Our Crew</a></li>
+                                <li><a href="javascript:void(0)">Careers</a></li>
+                                <li><a href="javascript:void(0)">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="yswFooterBottom">
+            <p class="yswFooterPolicy">Privacy Policy &nbsp;|&nbsp; Terms Of Use &nbsp;|&nbsp; Cookie Policy
+                &nbsp;|&nbsp; Disclaimer &nbsp;|&nbsp; Accessibility Statement &nbsp;|&nbsp; Acceptable Use Policy
+                &nbsp;|&nbsp; Do Not Sell My Info</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
