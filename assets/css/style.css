@@ -37,6 +37,24 @@ body {
     overflow-x: hidden;
 }
 
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+ol,
+ul,
+dl,
+fieldset,
+pre {
+    margin: 0;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -223,21 +241,14 @@ img {
    LOGO (sailboat badge)
    ============================================================ */
 .yswLogo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-    width: 96px;
-    padding: 16px 8px 18px;
-    background-color: var(--ysw-blue);
-    flex-shrink: 0;
+    max-width: 100px;
+    position: relative;
+    top: 60px;
 }
 
-.yswLogoSail {
-    width: 52px;
-    height: auto;
-    display: block;
+.yswLogo .yswLogoSail {
+    width: 100%;
+    object-fit: contain;
 }
 
 .yswLogoText {
@@ -277,21 +288,16 @@ img {
 }
 
 .yswHeaderInner {
-    max-width: 1560px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 6%;
     height: 80px;
     display: flex;
     align-items: center;
-    gap: 36px;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 /* logo hangs below the 80px bar */
-.yswHeader .yswLogo {
-    align-self: flex-start;
-    position: relative;
-    z-index: 5;
-}
 
 .yswHeaderContact {
     display: flex;
@@ -299,17 +305,34 @@ img {
     gap: 4px;
 }
 
+.yswContactOptionsWrapper{
+    position: relative;
+}
+
+.yswHeaderContactSecondary {
+    position: absolute;
+    background-color: #fff;
+    top: 60px;
+    left: -40px;
+    padding: 20px 40px;
+    width: 236px;
+    cursor: pointer;
+    display: none;
+}
+
 .yswLocationSelect {
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
-    font-family: "Mona Sans", sans-serif;
+    color: var(--blackish-blue, #000B1B);
+    font-family: "Mona Sans";
     font-size: 12px;
+    font-style: normal;
     font-weight: 400;
+    line-height: 14px;
     letter-spacing: 0.6px;
     text-transform: uppercase;
-    color: var(--ysw-blackish-blue);
     display: flex;
     align-items: center;
     gap: 6px;
@@ -330,8 +353,21 @@ img {
     font-variation-settings: 'wght' 600, 'wdth' 125;
 }
 
-.yswNav {
-    margin-left: auto;
+.yswHeaderPhone:hover{
+    color: var(--ysw-blue);
+}
+
+.logoAndLocationWrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.navAndBurgerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 120px;
 }
 
 .yswNavLinks {
@@ -352,7 +388,7 @@ img {
 }
 
 .yswNavLink:hover {
-    opacity: 0.65;
+    color: var(--ysw-blue);
 }
 
 .yswHeaderRight {
@@ -1287,15 +1323,6 @@ img {
         height: 64px;
     }
 
-    .yswHeader .yswLogo {
-        width: 72px;
-        padding: 10px 6px 12px;
-        gap: 6px;
-    }
-
-    .yswHeader .yswLogoSail {
-        width: 38px;
-    }
 
     .yswHeader .yswLogoText span {
         font-size: 12px;
