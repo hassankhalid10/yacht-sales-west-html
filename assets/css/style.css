@@ -37,6 +37,24 @@ body {
     overflow-x: hidden;
 }
 
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+ol,
+ul,
+dl,
+fieldset,
+pre {
+    margin: 0;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -128,6 +146,11 @@ img {
     color: #fff;
 }
 
+.yswWhiteText img {
+    width: 15px !important;
+    height: 15px;
+}
+
 /* ============================================================
    BUTTONS & LINKS  (shared / reused)
    ============================================================ */
@@ -198,7 +221,9 @@ img {
     opacity: 0.85;
     transition: opacity 0.2s ease, gap 0.2s ease;
     font-variation-settings: 'wght' 600, 'wdth' 125;
+    color: #fff;
 }
+
 
 .yswArrowLink i {
     font-size: 13px;
@@ -207,15 +232,13 @@ img {
 .yswArrowLink:hover {
     opacity: 1;
     gap: 14px;
+    color: #fff;
 }
 
 /* ============================================================
    LAYOUT CONTAINER
    ============================================================ */
 .yswContainer {
-    max-width: 1560px;
-    margin: 0 auto;
-    padding: 0 40px;
     width: 100%;
 }
 
@@ -223,21 +246,14 @@ img {
    LOGO (sailboat badge)
    ============================================================ */
 .yswLogo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-    width: 96px;
-    padding: 16px 8px 18px;
-    background-color: var(--ysw-blue);
-    flex-shrink: 0;
+    max-width: 100px;
+    position: relative;
+    top: 60px;
 }
 
-.yswLogoSail {
-    width: 52px;
-    height: auto;
-    display: block;
+.yswLogo .yswLogoSail {
+    width: 100%;
+    object-fit: contain;
 }
 
 .yswLogoText {
@@ -277,21 +293,16 @@ img {
 }
 
 .yswHeaderInner {
-    max-width: 1560px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 6%;
     height: 80px;
     display: flex;
     align-items: center;
-    gap: 36px;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 /* logo hangs below the 80px bar */
-.yswHeader .yswLogo {
-    align-self: flex-start;
-    position: relative;
-    z-index: 5;
-}
 
 .yswHeaderContact {
     display: flex;
@@ -299,17 +310,34 @@ img {
     gap: 4px;
 }
 
+.yswContactOptionsWrapper {
+    position: relative;
+}
+
+.yswHeaderContactSecondary {
+    position: absolute;
+    background-color: #fff;
+    top: 60px;
+    left: -40px;
+    padding: 20px 40px;
+    width: 236px;
+    cursor: pointer;
+    display: none;
+}
+
 .yswLocationSelect {
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
-    font-family: "Mona Sans", sans-serif;
+    color: var(--blackish-blue, #000B1B);
+    font-family: "Mona Sans";
     font-size: 12px;
+    font-style: normal;
     font-weight: 400;
+    line-height: 14px;
     letter-spacing: 0.6px;
     text-transform: uppercase;
-    color: var(--ysw-blackish-blue);
     display: flex;
     align-items: center;
     gap: 6px;
@@ -330,8 +358,21 @@ img {
     font-variation-settings: 'wght' 600, 'wdth' 125;
 }
 
-.yswNav {
-    margin-left: auto;
+.yswHeaderPhone:hover {
+    color: var(--ysw-blue);
+}
+
+.logoAndLocationWrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.navAndBurgerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 120px;
 }
 
 .yswNavLinks {
@@ -352,7 +393,7 @@ img {
 }
 
 .yswNavLink:hover {
-    opacity: 0.65;
+    color: var(--ysw-blue);
 }
 
 .yswHeaderRight {
@@ -537,6 +578,10 @@ img {
     inset: 0;
     display: flex;
     align-items: center;
+    width: 100%;
+    left: 17%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .yswHeroContent {
@@ -655,14 +700,14 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 40px;
     width: 90%;
     text-align: center;
+    max-width: 300px;
 }
 
 .yswPromoLogo {
-    width: 320px;
-    max-width: 70vw;
+    width: 100%;
     height: auto;
     object-fit: contain;
 }
@@ -700,7 +745,6 @@ img {
 
 .yswPromoCarousel.owl-carousel .owl-nav button.owl-prev:hover,
 .yswPromoCarousel.owl-carousel .owl-nav button.owl-next:hover {
-    background: #fff;
     color: var(--ysw-blue);
     border-color: #fff;
 }
@@ -714,11 +758,11 @@ img {
     bottom: 72px;
     left: 200px;
     display: flex;
-    gap: 8px;
+    gap: 16px;
 }
 
 .yswPromoCarousel.owl-carousel .owl-dots .owl-dot span {
-    width: 28px;
+    width: 40px;
     height: 4px;
     border-radius: 4px;
     margin: 0;
@@ -728,7 +772,6 @@ img {
 
 .yswPromoCarousel.owl-carousel .owl-dots .owl-dot.active span {
     background: #fff;
-    width: 44px;
 }
 
 /* ============================================================
@@ -793,12 +836,11 @@ img {
 .yswWelcomeImageWrap {
     position: relative;
     width: 100%;
-    padding-top: 68%;
-    border-radius: 4px;
+    padding-top: 47%;
     overflow: hidden;
 }
 
-.yswWelcomeImageWrap img {
+.yswWelcomeImageWrap .welcomeMedia {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -1079,6 +1121,7 @@ img {
     font-size: 120px;
     line-height: 1;
     color: var(--ysw-blue);
+    opacity: 0.3;
 }
 
 .yswTestimonialText {
@@ -1112,14 +1155,13 @@ img {
     flex-direction: column;
 }
 
-.yswLogoFooter {
-    width: 150px;
-    padding: 26px 14px 28px;
-    gap: 14px;
+.yswLogoFooter .yswLogoSail {
+    width: 100%;
+    object-fit: contain;
 }
 
-.yswLogoFooter .yswLogoSail {
-    width: 82px;
+.yswLogoFooter {
+    max-width: 220px;
 }
 
 .yswLogoFooter .yswLogoText span {
@@ -1174,7 +1216,7 @@ img {
 
 .yswCompassInput {
     flex: 1;
-    min-width: 0;
+    min-width: 400px;
     border: 1px solid var(--ysw-d9);
     border-right: none;
     border-radius: 4px 0 0 4px;
@@ -1205,14 +1247,15 @@ img {
 }
 
 .yswFooterColHead {
-    font-family: "Mona Sans", sans-serif;
+    color: #042C65;
+    font-family: "Mona Sans";
     font-size: 20px;
-    font-weight: 600;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--ysw-blue);
-    margin-bottom: 18px;
-    font-variation-settings: 'wght' 600, 'wdth' 125;
+    margin-bottom: 24px;
 }
 
 .yswFooterLinks li {
@@ -1220,16 +1263,16 @@ img {
 }
 
 .yswFooterLinks li a {
-    font-family: "Mona Sans", sans-serif;
+    color: var(--Text-slate, #333);
+    font-family: "Mona Sans";
     font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
     line-height: 24px;
-    color: var(--ysw-slate);
-    transition: color 0.2s ease;
-    font-variation-settings: 'wght' 400, 'wdth' 100;
 }
 
 .yswFooterLinks li a:hover {
-    color: var(--ysw-blue);
+    color: var(--Text-slate, #333);
 }
 
 /* Footer bottom */
@@ -1272,8 +1315,6 @@ img {
    RESPONSIVE — ≤ 991px (tablet / mobile)
    ============================================================ */
 @media (max-width: 991px) {
-
-    .yswContainer,
     .yswHeaderInner {
         padding: 0 24px;
     }
@@ -1287,15 +1328,6 @@ img {
         height: 64px;
     }
 
-    .yswHeader .yswLogo {
-        width: 72px;
-        padding: 10px 6px 12px;
-        gap: 6px;
-    }
-
-    .yswHeader .yswLogoSail {
-        width: 38px;
-    }
 
     .yswHeader .yswLogoText span {
         font-size: 12px;

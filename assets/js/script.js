@@ -3,6 +3,53 @@ $(document).ready(function () {
     // ============================================================
     // YACHT SALES WEST — HOME PAGE JS
     // ============================================================
+    // location toggle
+    // Open / Close dropdown
+    $('.yswHeaderContact .yswLocationSelect').on('click', function (e) {
+        e.stopPropagation();
+        $('.yswHeaderContactSecondary').slideToggle(200);
+    });
+
+    // Swap content
+    $('.yswHeaderContactSecondary').on('click', function () {
+
+        // Current top data
+        let currentLocation = $('.yswHeaderContact .yswLocationSelect')
+            .clone()
+            .children()
+            .remove()
+            .end()
+            .text()
+            .trim();
+
+        let currentPhone = $('.yswHeaderContact .yswHeaderPhone').attr('href');
+        let currentPhoneText = $('.yswHeaderContact .yswHeaderPhone').text();
+
+        // Dropdown data
+        let newLocation = $(this).find('.yswLocationSelect').text().trim();
+
+        let newPhoneHref = $(this).find('.yswHeaderPhone').attr('href');
+        let newPhoneText = $(this).find('.yswHeaderPhone').text();
+
+        // Update top section
+        $('.yswHeaderContact .yswLocationSelect').html(
+            `${newLocation} <i class="fa-solid fa-chevron-down"></i>`
+        );
+
+        $('.yswHeaderContact .yswHeaderPhone')
+            .attr('href', newPhoneHref)
+            .text(newPhoneText);
+
+        // Update dropdown with previous selected data
+        $('.yswHeaderContactSecondary .yswLocationSelect').text(currentLocation);
+
+        $('.yswHeaderContactSecondary .yswHeaderPhone')
+            .attr('href', currentPhone)
+            .text(currentPhoneText);
+
+        // Hide dropdown
+        $('.yswHeaderContactSecondary').slideUp(200);
+    });
 
     // --- Side menu toggle ---
     function openMenu() {
@@ -31,8 +78,8 @@ $(document).ready(function () {
             dots: true,
             nav: true,
             navText: [
-                '<i class="fa-solid fa-arrow-left"></i>',
-                '<i class="fa-solid fa-arrow-right"></i>'
+                '<img src="./assets/images/home/left-nav.png" alt="arrow">',
+                '<img src="./assets/images/home/right-nav.png" alt="arrow">'
             ],
             autoplay: true,
             autoplayTimeout: 6000,
