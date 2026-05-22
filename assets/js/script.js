@@ -78,8 +78,8 @@ $(document).ready(function () {
             dots: true,
             nav: true,
             navText: [
-                '<i class="fa-solid fa-arrow-left"></i>',
-                '<i class="fa-solid fa-arrow-right"></i>'
+                '<img src="./assets/images/home/left-nav.png" alt="arrow">',
+                '<img src="./assets/images/home/right-nav.png" alt="arrow">'
             ],
             autoplay: true,
             autoplayTimeout: 6000,
